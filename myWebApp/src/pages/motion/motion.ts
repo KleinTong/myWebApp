@@ -33,11 +33,14 @@ export class MotionPage {
 
     // // Stop watch
     // subscription.unsubscribe();
-    this.platform.ready().then(() =>
       this.deviceMotion.getCurrentAcceleration().then(
       (acceleration: DeviceMotionAccelerationData) => {console.log(acceleration); this.mess="succeed"},
       (error: any) => {console.log(error);console.log("why"); this.mess="not fine"}
-      ));
+      );
+      var subscription = this.deviceMotion.watchAcceleration().subscribe((acceleration: DeviceMotionAccelerationData) => {
+        console.log("hh");
+        this.mess = this.mess == "change"? "full" : "change";
+      })
   }
 
   ionViewDidLoad() {
