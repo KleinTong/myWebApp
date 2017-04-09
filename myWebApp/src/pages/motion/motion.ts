@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Platform, IonicPage, NavController, NavParams } from 'ionic-angular';
+import { DeviceMotion, DeviceMotionAccelerationData } from '@ionic-native/device-motion';
 
 /**
  * Generated class for the Motion page.
@@ -12,9 +13,31 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-motion',
   templateUrl: 'motion.html',
 })
-export class Motion {
+export class MotionPage {
+  mess: string = "hello";
+  constructor(public navCtrl: NavController, public navParams: NavParams, public platform: Platform, private deviceMotion: DeviceMotion) {
+  }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+  ngAfterViewInit() {
+    // // Get the device current acceleration
+    // this.deviceMotion.getCurrentAcceleration().then(
+    //   (acceleration: DeviceMotionAccelerationData) => console.log(acceleration),
+    //   (error: any) => console.log(error)
+    // );
+
+    // // Watch device acceleration
+    // var subscription = this.deviceMotion.watchAcceleration().subscribe((acceleration: DeviceMotionAccelerationData) => {
+    //   console.log(acceleration);
+    // });
+
+    // // Stop watch
+    // subscription.unsubscribe();
+    this.platform.ready().then(() =>
+      this.deviceMotion.getCurrentAcceleration().then(
+      (acceleration: DeviceMotionAccelerationData) => {console.log(acceleration); this.mess="succeed"},
+      (error: any) => {console.log(error);console.log("why"); this.mess="not fine"}
+      ));
   }
 
   ionViewDidLoad() {
