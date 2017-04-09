@@ -18690,7 +18690,7 @@ ion-spinner.spinner-paused svg {
   -ms-flex-pack: center;
   justify-content: center;
   border-top: 0.55px solid rgba(0, 0, 0, 0.3);
-  background: #f8f8f8;
+  background: none;
 }
 
 .tabs-ios[tabsPlacement=top] .tabbar {
@@ -18854,7 +18854,7 @@ ion-spinner.spinner-paused svg {
 }
 
 .tabs-md .tabbar {
-  background: #f8f8f8;
+  background: none;
 }
 
 .tabs-md .tab-button {
@@ -19055,7 +19055,7 @@ ion-spinner.spinner-paused svg {
 }
 
 .tabs-wp .tabbar {
-  background: #f8f8f8;
+  background: none;
 }
 
 .tabs-wp .tab-button {
@@ -24310,5 +24310,268 @@ ion-navbar.toolbar {
   .wp .modal-wrapper > .ion-page > ion-header > ion-content.statusbar-padding:first-child[padding] .scroll-content,
   .wp .modal-wrapper > .ion-page > ion-header > ion-content.statusbar-padding:first-child[padding-top] .scroll-content {
     padding-top: calc(16px + 20px);
+  }
+}
+
+input-area .inputContainer {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+input-area .timeBar {
+  font-family: 'Lobster';
+  text-align: center;
+  color: #e74c3c;
+}
+
+input-area ul li {
+  list-style: none;
+}
+
+input-area .completed {
+  text-decoration: line-through;
+  color: red;
+}
+
+input-area .todoCom {
+  display: inline-block;
+  color: green;
+}
+
+input-area .move {
+  -webkit-animation: move 1s 1 ease forwards;
+  animation: move 1s 1 ease forwards;
+}
+
+@-webkit-keyframes move {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+
+@keyframes move {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+
+todo-list .listContainer {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+todo-list .timeBar {
+  font-family: 'Lobster';
+  text-align: center;
+  color: #e74c3c;
+}
+
+todo-list ul li {
+  list-style: none;
+}
+
+todo-list .completed {
+  text-decoration: line-through;
+  color: red;
+}
+
+todo-list .todoCom {
+  display: inline-block;
+  color: green;
+}
+
+todo-list .move {
+  -webkit-animation: move 1s 1 ease forwards;
+  animation: move 1s 1 ease forwards;
+}
+
+@keyframes move {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+
+page-ball {
+  /*parabola animation*/
+}
+
+page-ball .content {
+  text-align: center;
+  background: url("/imgs/back1.jpg") no-repeat center;
+  background-size: cover;
+}
+
+page-ball .ball {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  border-radius: 7.5px;
+  background-color: yellowgreen;
+  animation: parabola 1s infinite alternate;
+  -webkit-animation: parabola 0.5s infinite alternate;
+}
+
+page-ball .myBtn {
+  width: 90%;
+}
+
+@keyframes parabola {
+  0% {
+    -webkit-transform: translate(-30px, 90px);
+    transform: translate(-30px, 90px);
+  }
+  10% {
+    -webkit-transform: translate(-24px, 57.6px);
+    transform: translate(-24px, 57.6px);
+  }
+  20% {
+    -webkit-transform: translate(-18px, 32.4px);
+    transform: translate(-18px, 32.4px);
+  }
+  30% {
+    -webkit-transform: translate(-12px, 14.4px);
+    transform: translate(-12px, 14.4px);
+  }
+  40% {
+    -webkit-transform: translate(-6px, 3.6px);
+    transform: translate(-6px, 3.6px);
+  }
+  50% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+  }
+  60% {
+    -webkit-transform: translate(6px, 3.6px);
+    transform: translate(6px, 3.6px);
+  }
+  70% {
+    -webkit-transform: translate(12px, 14.4px);
+    transform: translate(12px, 14.4px);
+  }
+  80% {
+    -webkit-transform: translate(18px, 32.4px);
+    transform: translate(18px, 32.4px);
+  }
+  90% {
+    -webkit-transform: translate(24px, 57.6px);
+    transform: translate(24px, 57.6px);
+  }
+  100% {
+    -webkit-transform: translate(30px, 90px);
+    transform: translate(30px, 90px);
+  }
+}
+
+@-webkit-keyframes parabola {
+  0% {
+    -webkit-transform: translate(-30px, 90px);
+    transform: translate(-30px, 90px);
+  }
+  10% {
+    -webkit-transform: translate(-24px, 57.6px);
+    transform: translate(-24px, 57.6px);
+  }
+  20% {
+    -webkit-transform: translate(-18px, 32.4px);
+    transform: translate(-18px, 32.4px);
+  }
+  30% {
+    -webkit-transform: translate(-12px, 14.4px);
+    transform: translate(-12px, 14.4px);
+  }
+  40% {
+    -webkit-transform: translate(-6px, 3.6px);
+    transform: translate(-6px, 3.6px);
+  }
+  50% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+  }
+  60% {
+    -webkit-transform: translate(6px, 3.6px);
+    transform: translate(6px, 3.6px);
+  }
+  70% {
+    -webkit-transform: translate(12px, 14.4px);
+    transform: translate(12px, 14.4px);
+  }
+  80% {
+    -webkit-transform: translate(18px, 32.4px);
+    transform: translate(18px, 32.4px);
+  }
+  90% {
+    -webkit-transform: translate(24px, 57.6px);
+    transform: translate(24px, 57.6px);
+  }
+  100% {
+    -webkit-transform: translate(30px, 90px);
+    transform: translate(30px, 90px);
+  }
+}
+
+todo-app .timeBar {
+  font-family: 'Lobster';
+  text-align: center;
+  color: #e74c3c;
+}
+
+todo-app ul li {
+  list-style: none;
+}
+
+todo-app .completed {
+  text-decoration: line-through;
+  color: red;
+}
+
+todo-app .todoCom {
+  display: inline-block;
+  color: green;
+}
+
+todo-app .move {
+  -webkit-animation: move 1s 1 ease forwards;
+  animation: move 1s 1 ease forwards;
+}
+
+@keyframes move {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
   }
 }

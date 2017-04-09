@@ -1,0 +1,13 @@
+<ul class="listContainer">
+  <li *ngFor="let todo of todoArr, let index = index">
+      <input type="checkbox" [checked]="todo.isCompleted" (change)="toggleCompletion(index)" />
+      <div class="todoCom" *ngIf="!todo.isCompleted" [class.completed]="todo.isCompleted">{{todo.label}}</div>
+      <div class="todoCom" *ngIf="todo.isCompleted" [class.completed]="todo.isCompleted" [class.move]="todo.completed">
+        <span *ngFor="let char of todo.label.split('')">
+        {{char}}
+      </span>
+    </div>
+    {{todo.time}}
+    <button ion-button (click)="remove(index)">remove</button>
+  </li>
+</ul>

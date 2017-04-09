@@ -1,0 +1,4 @@
+<div class="inputContainer">
+    <input #bbb type="text" placeholder="type items" (change)="todoItem = $event.target.value;"/>
+    <button ion-button small (click)="addTodo(todoItem);bbb.value = ''">Add</button>
+</div>

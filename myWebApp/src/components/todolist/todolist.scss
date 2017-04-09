@@ -1,0 +1,40 @@
+todo-list {
+    .listContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .timeBar {
+        font-family: 'Lobster';
+        text-align: center;
+        color: #e74c3c;
+    }
+
+    ul li {
+    list-style: none;
+    }
+    .completed {
+        text-decoration: line-through;
+            color: red;
+    }
+
+    .todoCom {
+        display: inline-block;
+        color: green;
+    }
+
+    .move {
+        animation: move 1s 1 ease forwards;
+    }
+
+    @keyframes move {
+        0% {
+            transform: translateX(0px);
+        }
+        100% {
+            transform: translateX(10px);
+        }
+    }
+
+}

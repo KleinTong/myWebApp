@@ -1,0 +1,100 @@
+page-ball {
+
+  .content {
+    text-align: center;
+    background: url('/imgs/back1.jpg') no-repeat center;
+    background-size: cover;
+    // background-color: green;
+  }
+
+  .ball {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 7.5px;
+    background-color: yellowgreen;
+    animation: parabola 1s infinite alternate;
+    -webkit-animation: parabola 0.5s infinite alternate;
+  }
+
+  .myBtn {
+    // background-color: green;
+    width: 90%;
+    // background-image: url(backBtn.jpg);
+  }
+
+  /*parabola animation*/
+  @keyframes parabola {
+    0% {
+      transform: translate(-30px, 90px);
+    }
+    10% {
+      transform: translate(-24px, 57.6px);
+    }
+    20% {
+      transform: translate(-18px, 32.4px);
+    }
+    30% {
+      transform: translate(-12px, 14.4px);
+    }
+    40% {
+      transform: translate(-6px, 3.6px);
+    }
+    50% {
+      transform: translate(0px, 0px);
+    }
+    60% {
+      transform: translate(6px, 3.6px);
+    }
+    70% {
+      transform: translate(12px, 14.4px);
+    }
+    80% {
+      transform: translate(18px, 32.4px);
+    }
+    90% {
+      transform: translate(24px, 57.6px);
+    }
+    100% {
+      transform: translate(30px, 90px);
+    }
+  }
+  @-webkit-keyframes parabola {
+    0% {
+      transform: translate(-30px, 90px);
+    }
+    10% {
+      transform: translate(-24px, 57.6px);
+    }
+    20% {
+      transform: translate(-18px, 32.4px);
+    }
+    30% {
+      transform: translate(-12px, 14.4px);
+    }
+    40% {
+      transform: translate(-6px, 3.6px);
+    }
+    50% {
+      transform: translate(0px, 0px);
+    }
+    60% {
+      transform: translate(6px, 3.6px);
+    }
+    70% {
+      transform: translate(12px, 14.4px);
+    }
+    80% {
+      transform: translate(18px, 32.4px);
+    }
+    90% {
+      transform: translate(24px, 57.6px);
+    }
+    100% {
+      transform: translate(30px, 90px);
+    }
+  }
+
+}
