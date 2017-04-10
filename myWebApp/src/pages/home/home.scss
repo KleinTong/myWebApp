@@ -1,3 +1,32 @@
 page-home {
+    .active {
+        border-bottom: 2px solid #E79C0E;
+        opacity: 1.0!important;
+    }
 
+    .seg {
+        height: auto;
+        color: black;
+        font-size: 1.5em;
+        opacity: 0.3;
+        font-weight: bold;
+    }
+    // ion-header {
+    //     background: yellow;
+    // }
+
+    // ion-toolbar {
+    //     background: blue!important;
+    //     // height:100px;
+    // }
+    // ion-segment {
+    //     // height: 10em!important;
+    //     background: yellow;
+    // }
+    // ion-segment-button {
+    //     height: 3em;
+    // }
+    .toolbar-background {
+        background-color: transparent;
+    }
 }

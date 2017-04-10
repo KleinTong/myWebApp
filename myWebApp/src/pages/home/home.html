@@ -1,18 +1,25 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="case" (ionChange)="caseChange()">
+      <ion-segment-button value="news">
+        <!--<ion-icon name="star">news</ion-icon>-->
+        <span [class.active]="ifNews" class="seg">NEWS</span>
+      </ion-segment-button>
+      <ion-segment-button value="labs">
+        <span [class.active]="!ifNews" class="seg">LABS</span>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>hello, klein tong!</h2>
-  <h1>coding is so funny!</h1>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content padding (swipe)="changeSeg($event)">
+  <div [ngSwitch]="case">
+    <ion-item *ngSwitchCase="'news'">
+      news
+    </ion-item>
+    <ion-item *ngSwitchCase="'labs'">
+      labs
+    </ion-item>
+    <ion-item *ngSwitchDefault>hh</ion-item>
+  </div>
 </ion-content>

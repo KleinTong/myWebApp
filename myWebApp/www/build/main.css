@@ -16875,12 +16875,12 @@ ion-segment {
   flex: 1;
   width: 0;
   height: 3.2rem;
-  border-width: 1px;
+  border-width: 0px;
   border-style: solid;
-  border-color: #387ef5;
+  border-color: transparent;
   font-size: 1.3rem;
   line-height: 3rem;
-  color: #387ef5;
+  color: transparent;
   background-color: transparent;
 }
 
@@ -16891,18 +16891,18 @@ ion-segment {
 
 .segment-ios .segment-button.segment-activated {
   color: #fff;
-  background-color: #387ef5;
+  background-color: transparent;
   opacity: 1;
   transition: 100ms all linear;
 }
 
 .segment-ios .segment-button:hover:not(.segment-activated) {
-  background-color: rgba(56, 126, 245, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   transition: 100ms all linear;
 }
 
 .segment-ios .segment-button:active:not(.segment-activated) {
-  background-color: rgba(56, 126, 245, 0.16);
+  background-color: transparent;
   transition: 100ms all linear;
 }
 
@@ -16922,7 +16922,7 @@ ion-segment {
 }
 
 .segment-ios .segment-button-disabled {
-  color: rgba(56, 126, 245, 0.3);
+  color: rgba(0, 0, 0, 0.3);
   pointer-events: none;
 }
 
@@ -16935,7 +16935,7 @@ ion-segment {
 }
 
 .toolbar-ios .segment-button {
-  max-width: 100px;
+  max-width: 150px;
   height: 2.6rem;
   font-size: 1.2rem;
   line-height: 2.5rem;
@@ -16956,7 +16956,7 @@ ion-segment {
 }
 
 .segment-ios-primary .segment-button:active:not(.segment-activated) {
-  background-color: rgba(56, 126, 245, 0.16);
+  background-color: rgba(56, 126, 245, 0);
 }
 
 .segment-ios-primary .segment-button.segment-activated {
@@ -16982,7 +16982,7 @@ ion-segment {
 }
 
 .segment-ios-secondary .segment-button:active:not(.segment-activated) {
-  background-color: rgba(50, 219, 100, 0.16);
+  background-color: rgba(50, 219, 100, 0);
 }
 
 .segment-ios-secondary .segment-button.segment-activated {
@@ -17008,7 +17008,7 @@ ion-segment {
 }
 
 .segment-ios-danger .segment-button:active:not(.segment-activated) {
-  background-color: rgba(245, 61, 61, 0.16);
+  background-color: rgba(245, 61, 61, 0);
 }
 
 .segment-ios-danger .segment-button.segment-activated {
@@ -17034,7 +17034,7 @@ ion-segment {
 }
 
 .segment-ios-light .segment-button:active:not(.segment-activated) {
-  background-color: rgba(244, 244, 244, 0.16);
+  background-color: rgba(244, 244, 244, 0);
 }
 
 .segment-ios-light .segment-button.segment-activated {
@@ -17060,7 +17060,7 @@ ion-segment {
 }
 
 .segment-ios-dark .segment-button:active:not(.segment-activated) {
-  background-color: rgba(34, 34, 34, 0.16);
+  background-color: rgba(34, 34, 34, 0);
 }
 
 .segment-ios-dark .segment-button.segment-activated {
@@ -24543,6 +24543,23 @@ page-ball .myBtn {
     -webkit-transform: translate(30px, 90px);
     transform: translate(30px, 90px);
   }
+}
+
+page-home .active {
+  border-bottom: 2px solid #E79C0E;
+  opacity: 1 !important;
+}
+
+page-home .seg {
+  height: auto;
+  color: black;
+  font-size: 1.5em;
+  opacity: 0.3;
+  font-weight: bold;
+}
+
+page-home .toolbar-background {
+  background-color: transparent;
 }
 
 todo-app .timeBar {

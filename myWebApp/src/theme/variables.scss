@@ -36,9 +36,14 @@ $badge-font-size: 2.5rem;
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
-
-
-
+// $segment-button-ios-background-color: transparent;
+$segment-button-ios-border-width: 0px;
+$segment-button-ios-background-color-activated: transparent;
+$segment-button-ios-toolbar-button-max-width: 150px;
+$segment-button-ios-opacity-active: 0.0;
+// $item-ios-divider-color: red;
+// $item-ios-divider-color: red;
+// $item-ios-divider-background: red;
 
 // App Material Design Variables
 // --------------------------------------------------

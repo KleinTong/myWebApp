@@ -57560,7 +57560,8 @@ var AboutPage = (function () {
         }
     };
     AboutPage.prototype.change = function () {
-        console.log("something changed");
+        // console.log("something changed");
+        console.log(this.check);
     };
     return AboutPage;
 }());
@@ -57568,10 +57569,9 @@ AboutPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
         selector: 'page-about',template:/*ion-inline-start:"/Users/donsee/projects/myWebApp/myWebApp/src/pages/about/about.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      more practice, more notes\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-item>\n    <ion-icon name="star" item-left></ion-icon>\n    <span item-right>funny game</span>\n  </ion-item>\n  <ion-item>\n    <ion-checkbox [(ngModel)]="check" (ionChange)="change()"></ion-checkbox>\n    <span item-content ion-right>check box</span>\n  </ion-item>\n  <ion-item>\n    <ion-toggle [checked]="true" (ionChange)="change()"></ion-toggle>\n    <span item-content ion-right>toggle</span>\n  </ion-item>\n  <ion-item>\n    <ion-thumbnail ion-left>\n      <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1491804278226&di=a35218d94865b782811fc9e8aa9f0768&imgtype=0&src=http%3A%2F%2Fs6.sinaimg.cn%2Fmw690%2F003uKJn4gy6Q3yDyqB745%26690" alt="">\n    </ion-thumbnail>\n  </ion-item>\n  <ion-item>\n    <button ion-item>click with detail arrow</button>\n  </ion-item>\n  <ion-item>\n    <ion-icon name="compass" item-left></ion-icon>\n    <a ion-item href="https://www.ionicframework.com" item-right>\n      Anchor Item with no Detail Arrow\n    </a>\n  </ion-item>\n  <ion-item>\n    <ion-range color="danger" pin="true" min="-100" max="100">\n      <ion-label range-left>-100</ion-label>\n      <ion-label range-right>100</ion-label>\n    </ion-range>\n  </ion-item>\n  <ion-item>\n    <ion-range color="primary" pin="true" min="-100" max="100" step="10" snaps="true">\n      <ion-icon name="rainy" small range-left></ion-icon>\n      <ion-icon name="rainy" large range-right></ion-icon>\n    </ion-range>\n  </ion-item>\n  <ion-item>\n    <ion-badge item-right color="danger">{{subNum}}</ion-badge>\n  </ion-item>\n  <ion-item>\n    <ion-range dualKnobs="true" color="primary" pin="true" min="-100" max="100" step="5" [(ngModel)]="twoNum">\n      <ion-icon name="rainy" small range-left></ion-icon>\n      <ion-icon name="rainy" large range-right></ion-icon>\n    </ion-range>\n  </ion-item>  \n</ion-content>\n'/*ion-inline-end:"/Users/donsee/projects/myWebApp/myWebApp/src/pages/about/about.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
 ], AboutPage);
 
-var _a;
 //# sourceMappingURL=about.js.map
 
 /***/ }),
@@ -57596,16 +57596,37 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var HomePage = (function () {
     function HomePage(navCtrl) {
         this.navCtrl = navCtrl;
+        this.case = "news";
+        this.ifNews = true;
     }
+    HomePage.prototype.changeSeg = function (e) {
+        if (e.direction == 4 && this.case == 'labs') {
+            this.case = 'news';
+            this.ifNews = !this.ifNews;
+        }
+        if (e.direction == 2 && this.case == 'news') {
+            this.case = 'labs';
+            this.ifNews = !this.ifNews;
+        }
+    };
+    HomePage.prototype.caseChange = function () {
+        if (this.case == 'news') {
+            this.ifNews = true;
+        }
+        else {
+            this.ifNews = false;
+        }
+    };
     return HomePage;
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/donsee/projects/myWebApp/myWebApp/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h2>hello, klein tong!</h2>\n  <h1>coding is so funny!</h1>\n  <p>\n    This starter project comes with simple tabs-based layout for apps\n    that are going to primarily use a Tabbed UI.\n  </p>\n  <p>\n    Take a look at the <code>src/pages/</code> directory to add or change tabs,\n    update any existing page or create new pages.\n  </p>\n</ion-content>\n'/*ion-inline-end:"/Users/donsee/projects/myWebApp/myWebApp/src/pages/home/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/Users/donsee/projects/myWebApp/myWebApp/src/pages/home/home.html"*/'<ion-header>\n  <ion-toolbar>\n    <ion-segment [(ngModel)]="case" (ionChange)="caseChange()">\n      <ion-segment-button value="news">\n        <!--<ion-icon name="star">news</ion-icon>-->\n        <span [class.active]="ifNews" class="seg">NEWS</span>\n      </ion-segment-button>\n      <ion-segment-button value="labs">\n        <span [class.active]="!ifNews" class="seg">LABS</span>\n      </ion-segment-button>\n    </ion-segment>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding (swipe)="changeSeg($event)">\n  <div [ngSwitch]="case">\n    <ion-item *ngSwitchCase="\'news\'">\n      news\n    </ion-item>\n    <ion-item *ngSwitchCase="\'labs\'">\n      labs\n    </ion-item>\n    <ion-item *ngSwitchDefault>hh</ion-item>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/donsee/projects/myWebApp/myWebApp/src/pages/home/home.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object])
 ], HomePage);
 
+var _a;
 //# sourceMappingURL=home.js.map
 
 /***/ }),

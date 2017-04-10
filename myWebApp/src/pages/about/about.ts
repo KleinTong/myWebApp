@@ -26,6 +26,7 @@ export class AboutPage {
   }
 
   change() {
-    console.log("something changed");
+    // console.log("something changed");
+    console.log(this.check);
   }
 }
