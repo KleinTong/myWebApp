@@ -25,7 +25,7 @@
     </ion-thumbnail>
   </ion-item>
   <ion-item>
-    <button ion-item>click with detail arrow {{twoNum.lower}} {{twoNum.upper}}</button>
+    <button ion-item>click with detail arrow</button>
   </ion-item>
   <ion-item>
     <ion-icon name="compass" item-left></ion-icon>
@@ -46,7 +46,10 @@
     </ion-range>
   </ion-item>
   <ion-item>
-    <ion-range dualKnobs="true" color="primary" pin="true" min="-100" max="100" [(ngModel)]="twoNum">
+    <ion-badge item-right color="danger">{{subNum}}</ion-badge>
+  </ion-item>
+  <ion-item>
+    <ion-range dualKnobs="true" color="primary" pin="true" min="-100" max="100" step="5" [(ngModel)]="twoNum">
       <ion-icon name="rainy" small range-left></ion-icon>
       <ion-icon name="rainy" large range-right></ion-icon>
     </ion-range>
