@@ -56678,10 +56678,9 @@ BallPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
         selector: 'page-ball',template:/*ion-inline-start:"/Users/donsee/projects/myWebApp/myWebApp/src/pages/ball/ball.html"*/'<!--\n  Generated template for the Ball page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n\n<ion-content padding [class.content]="content" (longPress)="onLongPress($event)">\n  <div class="ball"></div>\n  <div class="mess" [style.left]="left + \'px\'">{{mess}}</div>\n  <button ion-button outline (click)="count()" class="myBtn" >\n    <span>count</span>\n  </button>\n  <!--<img src="backBtn.jpg" alt="" width="200" height="200">-->\n</ion-content>\n'/*ion-inline-end:"/Users/donsee/projects/myWebApp/myWebApp/src/pages/ball/ball.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
 ], BallPage);
 
-var _a, _b;
 //# sourceMappingURL=ball.js.map
 
 /***/ }),
@@ -57542,16 +57541,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var AboutPage = (function () {
     function AboutPage(navCtrl) {
         this.navCtrl = navCtrl;
+        this.check = false;
     }
+    // ngDoCheck() {
+    //   if(this.check == true) {
+    //     console.log("change");
+    //   }
+    // }
+    AboutPage.prototype.change = function (e) {
+        console.log(e.style);
+    };
     return AboutPage;
 }());
 AboutPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-about',template:/*ion-inline-start:"/Users/donsee/projects/myWebApp/myWebApp/src/pages/about/about.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      About\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/donsee/projects/myWebApp/myWebApp/src/pages/about/about.html"*/
+        selector: 'page-about',template:/*ion-inline-start:"/Users/donsee/projects/myWebApp/myWebApp/src/pages/about/about.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      About\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-item>\n    <ion-icon name="star" item-left></ion-icon>\n    <span #bbb item-right>funny game</span>\n  </ion-item>\n    <ion-item>\n    <ion-checkbox [(ngModel)]="check" (ionChange)="change(bbb)"></ion-checkbox>\n    <span item-content ion-right>funny game</span>\n  </ion-item>\n</ion-content>\n'/*ion-inline-end:"/Users/donsee/projects/myWebApp/myWebApp/src/pages/about/about.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object])
 ], AboutPage);
 
+var _a;
 //# sourceMappingURL=about.js.map
 
 /***/ }),
