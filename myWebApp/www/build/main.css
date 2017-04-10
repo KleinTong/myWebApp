@@ -24442,6 +24442,11 @@ page-ball .ball {
   -webkit-animation: parabola 0.5s infinite alternate;
 }
 
+page-ball .mess {
+  position: absolute;
+  top: 10px;
+}
+
 page-ball .myBtn {
   width: 90%;
 }

@@ -18,7 +18,7 @@ export class Ges implements OnInit, OnDestroy {
     ngOnInit() {
         this.pressGesture = new Gesture(this.el);
         this.pressGesture.listen();
-        this.pressGesture.on('swipe', e => {
+        this.pressGesture.on('pan', e => {
             this.longPress.emit(e);
         })
     }

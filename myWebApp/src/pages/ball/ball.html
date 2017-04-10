@@ -6,9 +6,9 @@
 -->
 
 
-<ion-content padding [class.content]="content" (longPress)="onLongPress()">
+<ion-content padding [class.content]="content" (longPress)="onLongPress($event)">
   <div class="ball"></div>
-  <div>{{mess}}</div>
+  <div class="mess" [style.left]="left + 'px'">{{mess}}</div>
   <button ion-button outline (click)="count()" class="myBtn" >
     <span>count</span>
   </button>

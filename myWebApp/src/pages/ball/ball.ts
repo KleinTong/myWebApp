@@ -14,7 +14,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class BallPage {
   mess: number = 0;
-  content: boolean = false;
+  content: boolean = true;
+  left: number = 5;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     // this.changeMess();
   }
@@ -29,9 +30,16 @@ export class BallPage {
     this.mess++;
   }
 
-  onLongPress() {
+  onLongPress(e) {
     this.mess = 50;
-    this.content = !this.content;
+    // this.content = !this.content;
+    if(e.direction == 2) {
+      this.left = (this.left - 5) % window.innerWidth;
+    }
+    else if(e.direction == 4) {
+      this.left = (this.left + 5) % window.innerWidth;
+    }
+
   }
 
   ionViewDidLoad() {
