@@ -7,6 +7,7 @@ import { NavController } from 'ionic-angular';
 })
 export class AboutPage {
   check: boolean = false;
+  toggle: boolean = false;
   constructor(public navCtrl: NavController) {
 
   }
@@ -16,7 +17,7 @@ export class AboutPage {
   //   }
   // }
 
-  change(e) {
-    console.log(e.style);
+  change() {
+    console.log("something changed");
   }
 }

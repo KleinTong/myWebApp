@@ -9,10 +9,14 @@
 <ion-content padding>
   <ion-item>
     <ion-icon name="star" item-left></ion-icon>
-    <span #bbb item-right>funny game</span>
+    <span item-right>funny game</span>
   </ion-item>
-    <ion-item>
-    <ion-checkbox [(ngModel)]="check" (ionChange)="change(bbb)"></ion-checkbox>
-    <span item-content ion-right>funny game</span>
+  <ion-item>
+    <ion-checkbox [(ngModel)]="check" (ionChange)="change()"></ion-checkbox>
+    <span item-content ion-right>check box</span>
+  </ion-item>
+  <ion-item>
+    <ion-toggle [checked]="true" (ionChange)="change()"></ion-toggle>
+    <span item-content ion-right>toggle</span>
   </ion-item>
 </ion-content>
