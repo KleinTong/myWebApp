@@ -34,6 +34,9 @@ export class BallPage {
     this.mess = 50;
     // this.content = !this.content;
     if(e.direction == 2) {
+      if(this.left < 0) {
+        this.left += window.innerWidth;
+      }
       this.left = (this.left - 5) % window.innerWidth;
     }
     else if(e.direction == 4) {
