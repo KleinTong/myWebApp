@@ -25,11 +25,30 @@
     </ion-thumbnail>
   </ion-item>
   <ion-item>
-    <button ion-item >click with detail arrow</button>
+    <button ion-item>click with detail arrow {{twoNum.lower}} {{twoNum.upper}}</button>
   </ion-item>
   <ion-item>
-    <a ion-item href="https://www.ionicframework.com">
+    <ion-icon name="compass" item-left></ion-icon>
+    <a ion-item href="https://www.ionicframework.com" item-right>
       Anchor Item with no Detail Arrow
     </a>
   </ion-item>
+  <ion-item>
+    <ion-range color="danger" pin="true" min="-100" max="100">
+      <ion-label range-left>-100</ion-label>
+      <ion-label range-right>100</ion-label>
+    </ion-range>
+  </ion-item>
+  <ion-item>
+    <ion-range color="primary" pin="true" min="-100" max="100" step="10" snaps="true">
+      <ion-icon name="rainy" small range-left></ion-icon>
+      <ion-icon name="rainy" large range-right></ion-icon>
+    </ion-range>
+  </ion-item>
+  <ion-item>
+    <ion-range dualKnobs="true" color="primary" pin="true" min="-100" max="100" [(ngModel)]="twoNum">
+      <ion-icon name="rainy" small range-left></ion-icon>
+      <ion-icon name="rainy" large range-right></ion-icon>
+    </ion-range>
+  </ion-item>  
 </ion-content>

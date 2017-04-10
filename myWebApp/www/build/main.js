@@ -57546,6 +57546,7 @@ var AboutPage = (function () {
         this.navCtrl = navCtrl;
         this.check = false;
         this.toggle = false;
+        this.twoNum = { lower: 0, upper: 0 };
     }
     // ngDoCheck() {
     //   if(this.check == true) {
@@ -57559,11 +57560,12 @@ var AboutPage = (function () {
 }());
 AboutPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-about',template:/*ion-inline-start:"/Users/donsee/projects/myWebApp/myWebApp/src/pages/about/about.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      more practice, more notes\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-item>\n    <ion-icon name="star" item-left></ion-icon>\n    <span item-right>funny game</span>\n  </ion-item>\n  <ion-item>\n    <ion-checkbox [(ngModel)]="check" (ionChange)="change()"></ion-checkbox>\n    <span item-content ion-right>check box</span>\n  </ion-item>\n  <ion-item>\n    <ion-toggle [checked]="true" (ionChange)="change()"></ion-toggle>\n    <span item-content ion-right>toggle</span>\n  </ion-item>\n  <ion-item>\n    <ion-thumbnail ion-left>\n      <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1491804278226&di=a35218d94865b782811fc9e8aa9f0768&imgtype=0&src=http%3A%2F%2Fs6.sinaimg.cn%2Fmw690%2F003uKJn4gy6Q3yDyqB745%26690" alt="">\n    </ion-thumbnail>\n  </ion-item>\n  <ion-item>\n    <button ion-item >click with detail arrow</button>\n  </ion-item>\n  <ion-item>\n    <a ion-item href="https://www.ionicframework.com">\n      Anchor Item with no Detail Arrow\n    </a>\n  </ion-item>\n</ion-content>\n'/*ion-inline-end:"/Users/donsee/projects/myWebApp/myWebApp/src/pages/about/about.html"*/
+        selector: 'page-about',template:/*ion-inline-start:"/Users/donsee/projects/myWebApp/myWebApp/src/pages/about/about.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      more practice, more notes\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-item>\n    <ion-icon name="star" item-left></ion-icon>\n    <span item-right>funny game</span>\n  </ion-item>\n  <ion-item>\n    <ion-checkbox [(ngModel)]="check" (ionChange)="change()"></ion-checkbox>\n    <span item-content ion-right>check box</span>\n  </ion-item>\n  <ion-item>\n    <ion-toggle [checked]="true" (ionChange)="change()"></ion-toggle>\n    <span item-content ion-right>toggle</span>\n  </ion-item>\n  <ion-item>\n    <ion-thumbnail ion-left>\n      <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1491804278226&di=a35218d94865b782811fc9e8aa9f0768&imgtype=0&src=http%3A%2F%2Fs6.sinaimg.cn%2Fmw690%2F003uKJn4gy6Q3yDyqB745%26690" alt="">\n    </ion-thumbnail>\n  </ion-item>\n  <ion-item>\n    <button ion-item>click with detail arrow {{twoNum.lower}} {{twoNum.upper}}</button>\n  </ion-item>\n  <ion-item>\n    <ion-icon name="compass" item-left></ion-icon>\n    <a ion-item href="https://www.ionicframework.com" item-right>\n      Anchor Item with no Detail Arrow\n    </a>\n  </ion-item>\n  <ion-item>\n    <ion-range color="danger" pin="true" min="-100" max="100">\n      <ion-label range-left>-100</ion-label>\n      <ion-label range-right>100</ion-label>\n    </ion-range>\n  </ion-item>\n  <ion-item>\n    <ion-range color="primary" pin="true" min="-100" max="100" step="10" snaps="true">\n      <ion-icon name="rainy" small range-left></ion-icon>\n      <ion-icon name="rainy" large range-right></ion-icon>\n    </ion-range>\n  </ion-item>\n  <ion-item>\n    <ion-range dualKnobs="true" color="primary" pin="true" min="-100" max="100" [(ngModel)]="twoNum">\n      <ion-icon name="rainy" small range-left></ion-icon>\n      <ion-icon name="rainy" large range-right></ion-icon>\n    </ion-range>\n  </ion-item>  \n</ion-content>\n'/*ion-inline-end:"/Users/donsee/projects/myWebApp/myWebApp/src/pages/about/about.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object])
 ], AboutPage);
 
+var _a;
 //# sourceMappingURL=about.js.map
 
 /***/ }),

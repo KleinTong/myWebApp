@@ -8,6 +8,7 @@ import { NavController } from 'ionic-angular';
 export class AboutPage {
   check: boolean = false;
   toggle: boolean = false;
+  twoNum: any = {lower: 0, upper: 0};
   constructor(public navCtrl: NavController) {
 
   }
