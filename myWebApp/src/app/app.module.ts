@@ -20,6 +20,9 @@ import { InputArea } from '../components/inputarea/inputarea';
 import { Ges } from '../components/ges/ges';
 import { RedFont } from '../components/red-font/red-font';
 
+//providers
+import { DataFire } from '../providers/data-fire';
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { DeviceMotion, DeviceMotionAccelerationData } from '@ionic-native/device-motion';
@@ -55,6 +58,7 @@ import { DeviceMotion, DeviceMotionAccelerationData } from '@ionic-native/device
     Todoapp
   ],
   providers: [
+    DataFire,
     StatusBar,
     SplashScreen,
     DeviceMotion,

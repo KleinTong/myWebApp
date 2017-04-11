@@ -1,4 +1,5 @@
 page-home {
+    $aniHeight: 3em;
     .active {
         border-bottom: 2px solid #E79C0E;
         opacity: 1.0!important;
@@ -10,6 +11,18 @@ page-home {
         font-size: 1.5em;
         opacity: 0.3;
         font-weight: bold;
+        font-family: 'roboto-bold';
+    }
+    
+    .ani {
+        animation: swing 2s infinite;
+        height: $aniHeight;
+        line-height: $aniHeight;
+        // width: auto;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        // background: yellow;
     }
     // ion-header {
     //     background: yellow;

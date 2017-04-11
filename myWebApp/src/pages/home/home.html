@@ -15,11 +15,14 @@
 <ion-content padding (swipe)="changeSeg($event)">
   <div [ngSwitch]="case">
     <ion-item *ngSwitchCase="'news'">
-      news
+      <div class="ani">new</div>
     </ion-item>
-    <ion-item *ngSwitchCase="'labs'">
-      labs
+    <ion-item *ngSwitchCase="'labs'" class="ani">
+      <div class="ani">labs</div>
     </ion-item>
     <ion-item *ngSwitchDefault>hh</ion-item>
   </div>
+  <ion-item>
+    <button ion-button (click)="changeData()">click</button>
+  </ion-item>
 </ion-content>

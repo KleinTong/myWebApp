@@ -24556,6 +24556,17 @@ page-home .seg {
   font-size: 1.5em;
   opacity: 0.3;
   font-weight: bold;
+  font-family: 'roboto-bold';
+}
+
+page-home .ani {
+  -webkit-animation: swing 2s infinite;
+  animation: swing 2s infinite;
+  height: 3em;
+  line-height: 3em;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 page-home .toolbar-background {
