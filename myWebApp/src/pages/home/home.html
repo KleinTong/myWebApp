@@ -17,12 +17,18 @@
     <ion-item *ngSwitchCase="'news'">
       <div class="ani">new</div>
     </ion-item>
-    <ion-item *ngSwitchCase="'labs'" class="ani">
+    <ion-item *ngSwitchCase="'labs'">
       <div class="ani">labs</div>
-    </ion-item>
+    </ion-item>    
+    <!--<ion-item *ngSwitchCase="'labs'" class="ani">
+      <div class="ani">labs</div>
+    </ion-item>-->
     <ion-item *ngSwitchDefault>hh</ion-item>
   </div>
   <ion-item>
     <button ion-button (click)="changeData()">click</button>
   </ion-item>
+  <ion-scroll scrollY="true" zoom="true">
+    <div style="width: 100%; height: 1000px; background: navajowhite"></div>
+  </ion-scroll>
 </ion-content>

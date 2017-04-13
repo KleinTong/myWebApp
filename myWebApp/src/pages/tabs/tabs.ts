@@ -6,6 +6,7 @@ import { HomePage } from '../home/home';
 import { MotionPage } from '../motion/motion';
 import { BallPage } from '../ball/ball';
 import { Todoapp } from '../todoapp/todoapp';
+import { LoginPage } from '../login/login';
 
 @Component({
   templateUrl: 'tabs.html'

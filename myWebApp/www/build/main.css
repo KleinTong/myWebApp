@@ -24573,6 +24573,11 @@ page-home .toolbar-background {
   background-color: transparent;
 }
 
+page-home ion-scroll {
+  white-space: nowrap;
+  height: 100px;
+}
+
 todo-app .timeBar {
   font-family: 'Lobster';
   text-align: center;

@@ -11,6 +11,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { MotionPage } from '../pages/motion/motion';
 import { BallPage } from '../pages/ball/ball';
 import { Todoapp } from '../pages/todoapp/todoapp';
+import { LoginPage } from '../pages/login/login';
 
 //components
 import { TodoList } from '../components/todolist/todolist';
@@ -40,7 +41,8 @@ import { DeviceMotion, DeviceMotionAccelerationData } from '@ionic-native/device
     TodoList,
     InputArea,
     Ges,
-    RedFont
+    RedFont,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -55,7 +57,8 @@ import { DeviceMotion, DeviceMotionAccelerationData } from '@ionic-native/device
     TabsPage,
     MotionPage,
     BallPage,
-    Todoapp
+    Todoapp,
+    LoginPage
   ],
   providers: [
     DataFire,

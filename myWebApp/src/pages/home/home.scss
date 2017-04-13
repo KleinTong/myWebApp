@@ -42,4 +42,8 @@ page-home {
     .toolbar-background {
         background-color: transparent;
     }
+    ion-scroll {
+        white-space: nowrap;
+        height: 100px;
+    }
 }

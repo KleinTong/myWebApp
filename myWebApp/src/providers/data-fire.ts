@@ -34,17 +34,17 @@ export class DataFire {
     };
     firebase.initializeApp(config);
     // this.db = firebase.database().ref('/tintin/');
-    const messaging = firebase.messaging();
-    messaging.requestPermission().then(() => {
-      console.log("get permission");
-      return messaging.getToken();
-    }).then((token) => {
-      console.log(token);
-    }).catch((err) => {
-      console.log(err);
-    });
-    messaging.onMessage((payload) => {
-      console.log("onMessage: ", payload);
-    });
+    // const messaging = firebase.messaging();
+    // messaging.requestPermission().then(() => {
+    //   console.log("get permission");
+    //   return messaging.getToken();
+    // }).then((token) => {
+    //   console.log(token);
+    // }).catch((err) => {
+    //   console.log(err);
+    // });
+    // messaging.onMessage((payload) => {
+    //   console.log("onMessage: ", payload);
+    // });
   }
 }
